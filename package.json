@@ -1,0 +1,73 @@
+{
+  "name": "tfjs-component-playground",
+  "version": "1.0.0",
+  "description": "An app using TensorFlow.js as Web Components.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kherrick/x-face-detector.git"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production rollup -c",
+    "build:development": "NODE_ENV=development rollup -c",
+    "build:service-worker": "workbox generateSW ./service-worker/workbox-config.js",
+    "start": "es-dev-server --app-index dev/index.html --node-resolve --open --watch",
+    "lint": "eslint --ext .js,.html . --ignore-path .eslintignore",
+    "serve": "serve -s . -p 3000",
+    "test": "echo \"no test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@material/mwc-button": "^0.13.0",
+    "@material/mwc-dialog": "^0.13.0",
+    "@material/mwc-icon": "^0.12.0",
+    "@material/mwc-slider": "^0.13.0",
+    "@material/mwc-snackbar": "^0.13.0",
+    "@material/mwc-switch": "^0.13.0",
+    "@material/mwc-textfield": "^0.13.0",
+    "@polymer/app-layout": "^3.1.0",
+    "@polymer/iron-icons": "^3.0.1",
+    "@polymer/paper-icon-button": "^3.0.2",
+    "@polymer/paper-item": "^3.0.1",
+    "@polymer/paper-listbox": "^3.0.1",
+    "core-js": "^3.2.1",
+    "date-fns": "^2.4.1",
+    "lit-element": "^2.2.1",
+    "lit-html": "^1.1.2",
+    "lit-redux-router": "^0.9.14",
+    "lodash-es": "^4.17.15",
+    "pwa-helpers": "^0.9.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "rollup": "^1.23.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "x-face-detector": "git+https://github.com/kherrick/x-face-detector.git#semver:^1.4.2",
+    "x-image-classifier": "git+https://github.com/kherrick/x-image-classifier.git#semver:^1.2.0",
+    "x-object-detector": "git+https://github.com/kherrick/x-object-detector.git#semver:^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "es-dev-server": "^1.18.3",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "glob": "^7.1.4",
+    "prettier": "^1.18.2",
+    "rollup-plugin-replace": "^2.2.0",
+    "serve": "^11.2.0",
+    "workbox-cli": "^4.3.1"
+  },
+  "license": "AGPL-3.0",
+  "keywords": [
+    "Web Components",
+    "Custom Elements",
+    "WordPress",
+    "REST API",
+    "lit-html",
+    "LitElement"
+  ]
+}

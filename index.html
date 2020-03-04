@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US" class="theme-light">
+<head>
+  <meta charset="utf-8">
+  <meta name="Description" content="An app using TensorFlow.js as Web Components.">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#000000">
+
+  <base href="/">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="theme.css">
+
+  <title>TFJS Component Playground</title>
+</head>
+<body>
+  <tfjs-component-playground
+    siteTitle="TFJS Component Playground"
+    siteUrl="/"
+  ></tfjs-component-playground>
+
+  <script type="module" src="./dist/esm/tfjs-component-playground.js"></script>
+  <script type="module">
+    import registerServiceWorker from './service-worker/registerServiceWorker.js'
+
+    registerServiceWorker(document.querySelector('base').href.replace(/\/$/, ''))
+  </script>
+</body>
+
+</html>
