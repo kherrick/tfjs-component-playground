@@ -1,8 +1,9 @@
 import { html, css, LitElement } from 'lit-element'
 
 import { defineCustomElement, getBasePathWithTrailingSlash } from '../../utilities'
-import { navigateByPath } from '../../dispatchers/dispatchers'
+import { TFJS_COMPONENT_PLAYGROUND_SEQUENTIAL_IMAGE_ID_CHANGE } from '../../events/events'
 
+import { navigateByPath } from '../../dispatchers/dispatchers'
 import { store } from '../../store/configureStore'
 import { connect } from 'pwa-helpers/connect-mixin'
 
@@ -58,10 +59,6 @@ export class TFJSComponentPlaygroundNavigationSubtitle extends connect(store)(Li
 
   static get properties() {
     return {
-      method: {
-        reflect: false,
-        type: String
-      },
       type: {
         reflect: false,
         type: String
@@ -74,7 +71,6 @@ export class TFJSComponentPlaygroundNavigationSubtitle extends connect(store)(Li
     const singleComponentNavigationRoute = state.router.routes[`${this._path}:type/:method/*`]
 
     if (singleComponentNavigationRoute && singleComponentNavigationRoute.active) {
-      this.method = singleComponentNavigationRoute.params.method
       this.type = singleComponentNavigationRoute.params.type
     }
   }
@@ -94,15 +90,31 @@ export class TFJSComponentPlaygroundNavigationSubtitle extends connect(store)(Li
 
     const links = this._models.filter(models => models.path !== this.type)
     const pieces = this.activeRoute.split(this.type)
-    const mappedLinks = links.map(link => {
-      return {
-        title: link.title,
-        href: `${pieces[0]}${link.path}${pieces[1]}`
-      }
-    })
 
-    return mappedLinks
+    return links.map(link => ({
+      title: link.title,
+      href: `${pieces[0]}${link.path}${pieces[1]}`
+    }))
+  }
 
+  _handleIdChange(element) {
+    return ({ detail }) => {
+      const id = detail
+      const activeRoute = this.activeRoute
+      const routePieces = activeRoute.split('/')
+      const oldId = routePieces.pop()
+      const newRoute = routePieces.join('/') + `/${id}`
+      this.activeRoute = newRoute
+
+      element.requestUpdate()
+    }
+  }
+
+  firstUpdated(e) {
+    document.body.addEventListener(
+      TFJS_COMPONENT_PLAYGROUND_SEQUENTIAL_IMAGE_ID_CHANGE,
+      this._handleIdChange(this)
+    )
   }
 
   render() {
@@ -110,20 +122,16 @@ export class TFJSComponentPlaygroundNavigationSubtitle extends connect(store)(Li
 
     if (links.length === 0) {
       return html`
-        <div id="subtitle">
-          <h2>${this._getTypeTitle()}</h2>
-        </div>
+        <h2>${this._getTypeTitle()}</h2>
       `
     }
 
     return html`
-      <div id="subtitle">
-        <h2>
-          <a href="${links[0].href}">${links[0].title}</a>
-          ${this._getTypeTitle()}
-          <a href="${links[1].href}">${links[1].title}</a>
-        </h2>
-      </div>
+      <h2>
+        <a href="${links[0].href}">${links[0].title}</a>
+        ${this._getTypeTitle()}
+        <a href="${links[1].href}">${links[1].title}</a>
+      </h2>
     `
   }
 }

@@ -2,6 +2,8 @@ import { defineCustomElement } from '../../utilities'
 import { LitElement, css, html } from 'lit-element'
 import { render } from 'lit-html'
 
+import { TFJSComponentPlaygroundSequentialImageIdChange } from '../../events/events'
+
 import config from '../../config/index'
 
 import '@material/mwc-slider'
@@ -198,6 +200,7 @@ export class XImageClassifierSequentialImageIds extends LitElement {
   }
 
   _handleHistoryChange(id) {
+    this.shadowRoot.dispatchEvent(TFJSComponentPlaygroundSequentialImageIdChange(id))
     history.pushState({}, '', `/${this._getNewLocation(location.pathname.split('/'))}${id}`)
   }
 

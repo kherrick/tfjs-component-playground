@@ -15,7 +15,7 @@ import config from './config'
 
 import { getBasePathWithoutTrailingSlash } from './utilities'
 
-import { TFJS_COMPONENT_PLAYGROUND_DRAWER_TOGGLE, TFJS_COMPONENT_PLAYGROUND_DRAWER_POST_SELECT } from './events/events'
+import { TFJS_COMPONENT_PLAYGROUND_DRAWER_TOGGLE } from './events/events'
 
 import { store } from './store/configureStore'
 import { connectRouter, navigate } from 'lit-redux-router'

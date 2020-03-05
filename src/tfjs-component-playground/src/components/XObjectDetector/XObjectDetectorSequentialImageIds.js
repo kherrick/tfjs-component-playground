@@ -2,6 +2,8 @@ import { defineCustomElement } from '../../utilities'
 import { LitElement, css, html } from 'lit-element'
 import { render } from 'lit-html'
 
+import { TFJSComponentPlaygroundSequentialImageIdChange } from '../../events/events'
+
 import config from '../../config/index'
 
 import '@material/mwc-button'
@@ -207,6 +209,7 @@ export class XObjectDetectorSequentialImageIds extends LitElement {
 
   _handleHistoryChange(id) {
     this._objectList = []
+    this.shadowRoot.dispatchEvent(TFJSComponentPlaygroundSequentialImageIdChange(id))
     history.pushState({}, '', `/${this._getNewLocation(location.pathname.split('/'))}${id}`)
   }
 
