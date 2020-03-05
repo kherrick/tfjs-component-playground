@@ -3,6 +3,8 @@ import { html, css, LitElement } from 'lit-element'
 import { defineCustomElement, getBasePathWithTrailingSlash } from '../../utilities'
 import { navigateByPath } from '../../dispatchers/dispatchers'
 
+import '../../containers/navigation/TFJSComponentPlaygroundNavigationSubtitle'
+
 import '@material/mwc-button'
 import '@material/mwc-icon/mwc-icon-font'
 
@@ -54,16 +56,14 @@ export class XImageClassifierNavigation extends LitElement {
 
   render() {
     return html`
-      <div id="subtitle">
-        <h2>Image Classification</h2>
-      </div>
+      <tfjs-component-playground-navigation-subtitle type="mobilenet"></tfjs-component-playground-navigation-subtitle>
       <div id="controls">
         <mwc-button
-          id="camera"
-          icon="camera_alt"
-          @click=${() => navigateByPath(this._path + 'mobilenet/userMediaVideo')}
+          id="image-urls"
+          icon="http"
+          @click=${() => navigateByPath(this._path + 'mobilenet/single/aHR0cHM6Ly9hdmF0YXJzMy5naXRodWJ1c2VyY29udGVudC5jb20vdS8zMDY1NzYx')}
         >
-          Camera
+          Image Urls
         </mwc-button>
         <mwc-button
           id="github-avatars"
@@ -73,11 +73,11 @@ export class XImageClassifierNavigation extends LitElement {
           Github Avatars
         </mwc-button>
         <mwc-button
-          id="image-urls"
-          icon="http"
-          @click=${() => navigateByPath(this._path + 'mobilenet/single/aHR0cHM6Ly9hdmF0YXJzMy5naXRodWJ1c2VyY29udGVudC5jb20vdS8zMDY1NzYx')}
+          id="camera"
+          icon="camera_alt"
+          @click=${() => navigateByPath(this._path + 'mobilenet/userMediaVideo')}
         >
-          Image Urls
+          Camera
         </mwc-button>
       </div>
     `
