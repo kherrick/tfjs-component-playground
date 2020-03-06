@@ -38,7 +38,7 @@ export class TFJSComponentPlaygroundNavigationSubtitle extends connect(store)(Li
 
       a {
         color: var(--tfjs-component-playground-link-color, blue);
-        font-size: 50%;
+        font-size: 70%;
         text-decoration: var(--tfjs-component-playground-link-text-decoration, underline);
       }
 
@@ -53,6 +53,10 @@ export class TFJSComponentPlaygroundNavigationSubtitle extends connect(store)(Li
 
       a:last-child {
         margin-left: 1rem;
+      }
+
+      h2 {
+        font-size: 100%;
       }
     `
   }
