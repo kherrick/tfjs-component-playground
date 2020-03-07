@@ -47,7 +47,7 @@
     "rollup-plugin-terser": "^5.1.2",
     "x-face-detector": "git+https://github.com/kherrick/x-face-detector.git#semver:^1.4.2",
     "x-image-classifier": "git+https://github.com/kherrick/x-image-classifier.git#semver:^1.2.0",
-    "x-object-detector": "git+https://github.com/kherrick/x-object-detector.git#semver:^1.0.0"
+    "x-object-detector": "git+https://github.com/kherrick/x-object-detector.git#semver:^1.0.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.7.4",

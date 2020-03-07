@@ -61,7 +61,7 @@ export class XFaceDetectorNavigation extends LitElement {
         <mwc-button
           id="image-urls"
           icon="http"
-          @click=${() => navigateByPath(this._path + 'blazeface/single/aHR0cHM6Ly9hdmF0YXJzMy5naXRodWJ1c2VyY29udGVudC5jb20vdS8zMDY1NzYx')}
+          @click=${() => navigateByPath(this._path + 'blazeface/single/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2toZXJyaWNrL3RmanMtY29tcG9uZW50LXBsYXlncm91bmQvbWFzdGVyL2Fzc2V0cy9kZW1vLzE=')}
         >
           Image Urls
         </mwc-button>

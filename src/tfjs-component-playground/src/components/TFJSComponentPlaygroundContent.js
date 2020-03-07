@@ -67,16 +67,16 @@ export class TFJSComponentPlaygroundContent extends LitElement {
       <a href="https://github.com/tensorflow/tfjs/tree/master/tfjs-backend-wasm">a WebAssembly backend</a>. The
       <a href="https://github.com/tensorflow/tfjs-models/tree/master/mobilenet">mobilenet</a> model from Google is used
       for the classification of images from <a href=${this._path + 'mobilenet/userMediaVideo'}>a camera</a>,
-      <a href=${this._path + 'mobilenet/single/aHR0cHM6Ly9hdmF0YXJzMy5naXRodWJ1c2VyY29udGVudC5jb20vdS8zMDY1NzYx'}>images
+      <a href=${this._path + 'mobilenet/single/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2toZXJyaWNrL3RmanMtY29tcG9uZW50LXBsYXlncm91bmQvbWFzdGVyL2Fzc2V0cy9kZW1vLzc='}>images
       from the web</a>, or by <a href=${this._path + 'mobilenet/range/0x9999999/domain/github-avatars/3065761'}>dragging
       and dropping files into the drop zone</a>. The <a href="https://github.com/tensorflow/tfjs-models/tree/master/blazeface">blazeface</a>
       model is used for face identification with <a href=${this._path + 'blazeface/userMediaVideo'}>a camera</a>, using
-      urls of <a href=${this._path + 'blazeface/single/aHR0cHM6Ly9hdmF0YXJzMy5naXRodWJ1c2VyY29udGVudC5jb20vdS8zMDY1NzYx'}>
+      urls of <a href=${this._path + 'blazeface/single/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2toZXJyaWNrL3RmanMtY29tcG9uZW50LXBsYXlncm91bmQvbWFzdGVyL2Fzc2V0cy9kZW1vLzE='}>
       images from the web</a>, or by <a href=${this._path + 'blazeface/range/0x9999999/domain/github-avatars/3065761'}>
       dragging and dropping files into the drop zone</a>. Similarly, the
       <a href="https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd">coco-ssd</a> model is used for object
       identification with <a href=${this._path + 'cocossd/userMediaVideo'}>a camera</a>, using urls of
-      <a href=${this._path + 'cocossd/single/aHR0cHM6Ly9hdmF0YXJzMy5naXRodWJ1c2VyY29udGVudC5jb20vdS8zMDY1NzYx'}> images
+      <a href=${this._path + 'cocossd/single/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2toZXJyaWNrL3RmanMtY29tcG9uZW50LXBsYXlncm91bmQvbWFzdGVyL2Fzc2V0cy9kZW1vLzEw'}> images
       from the web</a>, or by <a href=${this._path + 'cocossd/range/0x9999999/domain/github-avatars/3065761'}>dragging
       and dropping files into the drop zone</a>. All image classification, object, and facial detection is completed
       client-side.</p>

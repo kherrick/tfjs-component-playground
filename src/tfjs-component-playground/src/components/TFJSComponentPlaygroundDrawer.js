@@ -191,7 +191,7 @@ const TFJSComponentPlaygroundDrawer = class extends LitElement {
             <paper-item @click=${() => this._navigate(this._path + 'blazeface/range/0x9999999/domain/github-avatars/3065761')}>Github Avatars</paper-item>
           </div>
           <div class="sidebar-link">
-            <paper-item @click=${() => this._navigate(this._path + 'blazeface/single/aHR0cHM6Ly9hdmF0YXJzMy5naXRodWJ1c2VyY29udGVudC5jb20vdS8zMDY1NzYx')}>Image Urls</paper-item>
+            <paper-item @click=${() => this._navigate(this._path + 'blazeface/single/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2toZXJyaWNrL3RmanMtY29tcG9uZW50LXBsYXlncm91bmQvbWFzdGVyL2Fzc2V0cy9kZW1vLzE=')}>Image Urls</paper-item>
           </div>
         </paper-listbox>
         <div class="drawer-header">Image Classification</div>
@@ -203,7 +203,7 @@ const TFJSComponentPlaygroundDrawer = class extends LitElement {
             <paper-item @click=${() => this._navigate(this._path + 'mobilenet/range/0x9999999/domain/github-avatars/3065761')}>Github Avatars</paper-item>
           </div>
           <div class="sidebar-link">
-            <paper-item @click=${() => this._navigate(this._path + 'mobilenet/single/aHR0cHM6Ly9hdmF0YXJzMy5naXRodWJ1c2VyY29udGVudC5jb20vdS8zMDY1NzYx')}>Image Urls</paper-item>
+            <paper-item @click=${() => this._navigate(this._path + 'mobilenet/single/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2toZXJyaWNrL3RmanMtY29tcG9uZW50LXBsYXlncm91bmQvbWFzdGVyL2Fzc2V0cy9kZW1vLzc=')}>Image Urls</paper-item>
           </div>
         </paper-listbox>
         <div class="drawer-header">Object Detection</div>
@@ -215,7 +215,7 @@ const TFJSComponentPlaygroundDrawer = class extends LitElement {
             <paper-item @click=${() => this._navigate(this._path + 'cocossd/range/0x9999999/domain/github-avatars/3065761')}>Github Avatars</paper-item>
           </div>
           <div class="sidebar-link">
-            <paper-item @click=${() => this._navigate(this._path + 'cocossd/single/aHR0cHM6Ly9hdmF0YXJzMy5naXRodWJ1c2VyY29udGVudC5jb20vdS8zMDY1NzYx')}>Image Urls</paper-item>
+            <paper-item @click=${() => this._navigate(this._path + 'cocossd/single/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2toZXJyaWNrL3RmanMtY29tcG9uZW50LXBsYXlncm91bmQvbWFzdGVyL2Fzc2V0cy9kZW1vLzEw')}>Image Urls</paper-item>
           </div>
         </paper-listbox>
 

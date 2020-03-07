@@ -281,9 +281,13 @@ export class XObjectDetectorSingleImageUrl extends connect(store)(LitElement) {
         <a href="${imageUrl}">
           <x-object-detector
             draw
-            lineWidth="3"
-            maxNumBoxes="8"
+            label
             strokeStyle="red"
+            labelTextColor="yellow"
+            labelBGColor="blue"
+            labelFontSize="16"
+            maxNumBoxes="8"
+            lineWidth="3"
             @x-object-detector-image-drop=${this._handleXObjectDetectorImageDrop}
             @x-object-detector-image-drag-over=${this._handleXObjectDetectorImageDragOver}
             @x-object-detector-image-drag-leave=${this._handleXObjectDetectorImageDragLeave}
