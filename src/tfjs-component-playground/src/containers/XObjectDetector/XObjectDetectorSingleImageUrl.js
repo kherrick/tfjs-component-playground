@@ -20,20 +20,34 @@ export class XObjectDetectorSingleImageUrl extends connect(store)(LitElement) {
   _path = getBasePathWithTrailingSlash()
 
   stateChanged(state) {
-    // connected to the store to access the route params -- there
     this.routeParams = state.router.routes[`${this._path}cocossd/single/:imgUrl/*`].params
   }
 
   static get styles() {
     return css`
       :host {
-        text-align: var(--x-face-detector-text-align, center);
+        text-align: var(--tfjs-component-playground-text-align, center);
         width: 100%;
+      }
+
+      .cors-anywhere-container {
+        margin-bottom: 1rem;
+      }
+
+      .cors-anywhere-label {
+        margin-right: 1rem;
       }
 
       .helper-text {
         margin: 0;
         padding: 0 0.5rem;
+      }
+
+      .location-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
       }
 
       .svg-wrapper h3 {
@@ -72,14 +86,19 @@ export class XObjectDetectorSingleImageUrl extends connect(store)(LitElement) {
         text-align: center;
       }
 
+      mwc-textfield {
+        max-width: 37.5rem;
+        width: 100%;
+      }
+
       mwc-button {
         background-color: var(--tfjs-component-playground-button-background-color, initial);
         border-radius: var(--tfjs-component-playground-button-border-radius, 4px);
         border: var(--tfjs-component-playground-button-border, 1px outset rgb(200, 200, 200));
-        display: block;
+        display: inline-block;
         font: var(--tfjs-component-playground-button-font, 400 13.3333px Arial);
-        height: var(--tfjs-component-playground-button-height, initial);
-        margin: var(--tfjs-component-playground-button-margin, initial);
+        height: var(--tfjs-component-playground-button-height, 100%);
+        margin: var(--tfjs-component-playground-button-margin, 0 0 0 1rem);
         padding: var(--tfjs-component-playground-button-padding, initial);
         width: var(--tfjs-component-playground-button-width, initial);
       }
@@ -250,12 +269,12 @@ export class XObjectDetectorSingleImageUrl extends connect(store)(LitElement) {
 
     return html`
       <p class="helper-text">Navigate to an image by URL or try dragging and dropping an image from your computer onto the current one.</p>
-      <div style="display: flex; align-items: center; justify-content: center; margin: 1rem;">
+      <div class="location-container">
         <mwc-textfield ?disabled=${this._areControlsDisabled} @keypress=${this._handleKeyPress} label="Image Url" icon="http" value="${imageUrl}"></mwc-textfield>
-        <mwc-button ?disabled=${this._areControlsDisabled} style="margin-left: 1rem; height: 100%; display: inline-block;" @click=${this._handleButtonPress} label="Go"></mwc-button>
+        <mwc-button ?disabled=${this._areControlsDisabled} @click=${this._handleButtonPress} label="Go"></mwc-button>
       </div>
-      <div style="margin-bottom: 1rem;">
-        <span style="margin-right: 1rem;">Try using cors-anywhere?</span>
+      <div class="cors-anywhere-container">
+        <span class="cors-anywhere-label">Try using cors-anywhere?</span>
         <mwc-switch ?disabled=${this._areControlsDisabled} @change=${this._handleSwitch} ?checked=${this._isCorsAnywhereEnabled}></mwc-switch>
       </div>
       <div id="x-object-detector-container">

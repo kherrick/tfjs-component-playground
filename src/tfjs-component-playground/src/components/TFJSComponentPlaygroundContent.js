@@ -14,7 +14,7 @@ export class TFJSComponentPlaygroundContent extends LitElement {
   static get styles() {
     return css`
       :host {
-        text-align: var(--x-face-detector-text-align, center);
+        text-align: var(--tfjs-component-playground-text-align, center);
       }
 
       a {

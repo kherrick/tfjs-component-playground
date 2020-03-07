@@ -124,19 +124,17 @@ export class TFJSComponentPlaygroundNavigationSubtitle extends connect(store)(Li
   render() {
     const links = this._getLinks()
 
-    if (links.length === 0) {
-      return html`
+    return links.length === 0
+      ? html`
         <h2>${this._getTypeTitle()}</h2>
       `
-    }
-
-    return html`
-      <h2>
-        <a href="${links[0].href}">${links[0].title}</a>
-        ${this._getTypeTitle()}
-        <a href="${links[1].href}">${links[1].title}</a>
-      </h2>
-    `
+      : html`
+        <h2>
+          <a href="${links[0].href}">${links[0].title}</a>
+          ${this._getTypeTitle()}
+          <a href="${links[1].href}">${links[1].title}</a>
+        </h2>
+      `
   }
 }
 
