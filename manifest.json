@@ -48,7 +48,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/tfjs-component-playground/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

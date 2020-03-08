@@ -18,5 +18,5 @@
 
 # build
 /_site/
-/dist/
-/service-worker.js
+#/dist/
+#/service-worker.js

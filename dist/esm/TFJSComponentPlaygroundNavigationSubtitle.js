@@ -1,0 +1,18 @@
+import{_ as t,a as e}from"./_rollupPluginBabelHelpers-ed8cbb08.js";import{L as n,c as i,h as r}from"./lit-element-51727a0b.js";import{TFJS_COMPONENT_PLAYGROUND_SEQUENTIAL_IMAGE_ID_CHANGE as o}from"./events.js";import"./index-85299b5e.js";import{store as a}from"./configureStore.js";import{getBasePathWithTrailingSlash as s,defineCustomElement as c}from"./utilities.js";import"./middleware.js";import"./types.js";import"./value.js";import"./initialState.js";import"./dispatchers-19a19022.js";import{c as l}from"./connect-mixin-144a42a2.js";import"./creators.js";import"./class-map-d74af20d.js";import"./mwc-button-e0830c8f.js";
+/**
+@license
+Copyright 2018 Google Inc. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+const p=document.createElement("link");function h(){var t=e(['\n        <h2>\n          <a href="','">',"</a>\n          ",'\n          <a href="','">',"</a>\n        </h2>\n      "]);return h=function(){return t},t}function u(){var t=e(["\n        <h2>","</h2>\n      "]);return u=function(){return t},t}function m(){var t=e(["\n      :host {\n        display: flex;\n        justify-content: center;\n        width: 100%;\n      }\n\n      a {\n        color: var(--tfjs-component-playground-link-color, blue);\n        font-size: 70%;\n        text-decoration: var(--tfjs-component-playground-link-text-decoration, underline);\n      }\n\n      a:hover {\n        color: var(--tfjs-component-playground-link-hover-color, darkblue);\n        text-decoration: var(--tfjs-component-playground-link-hover-text-decoration, underline);\n      }\n\n      a:first-of-type {\n        margin-right: 1rem;\n      }\n\n      a:last-child {\n        margin-left: 1rem;\n      }\n\n      h2 {\n        font-size: 100%;\n      }\n    "]);return m=function(){return t},t}p.rel="stylesheet",p.href="https://fonts.googleapis.com/icon?family=Material+Icons",document.head.appendChild(p);class d extends(l(a)(n)){constructor(){super(...arguments),t(this,"_path",s()),t(this,"_models",[{title:"Face Detection",path:"blazeface"},{title:"Image Classification",path:"mobilenet"},{title:"Object Detection",path:"cocossd"}])}static get styles(){return i(m())}static get properties(){return{type:{reflect:!1,type:String}}}stateChanged(t){this.activeRoute=t.router.activeRoute;var e=t.router.routes["".concat(this._path,":type/:method/*")];e&&e.active&&(this.type=e.params.type)}_getTypeTitle(){return this.type?this._models.filter(t=>t.path===this.type)[0].title:""}_getLinks(){if(!("".concat(this.activeRoute,"/").replace(/\/+\//g,"/")!==this._path))return[];var t=this._models.filter(t=>t.path!==this.type),e=this.activeRoute.split(this.type);return t.map(t=>({title:t.title,href:"".concat(e[0]).concat(t.path).concat(e[1])}))}_handleIdChange(t){return e=>{var{detail:n}=e,i=n,r=this.activeRoute.split("/"),o=(r.pop(),r.join("/")+"/".concat(i));this.activeRoute=o,t.requestUpdate()}}firstUpdated(t){document.body.addEventListener(o,this._handleIdChange(this))}render(){var t=this._getLinks();return 0===t.length?r(u(),this._getTypeTitle()):r(h(),t[0].href,t[0].title,this._getTypeTitle(),t[1].href,t[1].title)}}c("tfjs-component-playground-navigation-subtitle",d);export{d as TFJSComponentPlaygroundNavigationSubtitle};

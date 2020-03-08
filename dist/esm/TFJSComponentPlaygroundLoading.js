@@ -1,0 +1,1 @@
+import{a as n}from"./_rollupPluginBabelHelpers-ed8cbb08.js";import{L as r,h as o}from"./lit-element-51727a0b.js";import{defineCustomElement as e}from"./utilities.js";function t(){var r=n(['\n      <img src="icons/TFJSComponentPlaygroundLoading.svg">\n    ']);return t=function(){return r},r}e("tfjs-component-playground-loading",class extends r{render(){return o(t())}});

@@ -232,11 +232,6 @@ const TFJSComponentPlaygroundDrawer = class extends LitElement {
             </paper-item>
           </div>
           <div class="sidebar-link">
-            <paper-item @click=${() => document.location.href='https://kherrick.github.io/x-postpress-app/'}>
-              XPostpress App
-            </paper-item>
-          </div>
-          <div class="sidebar-link">
             <paper-item @click=${() => document.location.href='https://kherrick.github.io/pwgen/'}>
               pwgen
             </paper-item>
