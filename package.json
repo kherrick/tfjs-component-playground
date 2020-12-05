@@ -50,7 +50,9 @@
     "x-object-detector": "git+https://github.com/kherrick/x-object-detector.git#semver:^1.0.1"
   },
   "devDependencies": {
+    "@babel/compat-data": "^7.12.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.5.5",
     "es-dev-server": "^1.18.3",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.3.0",

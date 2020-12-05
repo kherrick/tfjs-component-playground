@@ -222,8 +222,8 @@ const TFJSComponentPlaygroundDrawer = class extends LitElement {
         <div class="drawer-header">Links</div>
         <paper-listbox>
           <div class="sidebar-link">
-            <paper-item @click=${() => document.location.href='https://infinitym.ca/posts/'}>
-              MCA Infinity Robotics - Posts
+            <paper-item @click=${() => document.location.href='https://kherrick.github.io/x-postpress-app/'}>
+              XPostpress App
             </paper-item>
           </div>
           <div class="sidebar-link">
@@ -232,13 +232,13 @@ const TFJSComponentPlaygroundDrawer = class extends LitElement {
             </paper-item>
           </div>
           <div class="sidebar-link">
-            <paper-item @click=${() => document.location.href='https://kherrick.github.io/x-postpress-app/'}>
-              XPostpress App
+            <paper-item @click=${() => document.location.href='https://kherrick.github.io/pwgen/'}>
+              pwgen
             </paper-item>
           </div>
           <div class="sidebar-link">
-            <paper-item @click=${() => document.location.href='https://kherrick.github.io/pwgen/'}>
-              pwgen
+            <paper-item @click=${() => document.location.href='https://infinitym.ca/posts/'}>
+              Infinity M
             </paper-item>
           </div>
         </paper-listbox>
